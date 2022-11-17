@@ -16,22 +16,22 @@
 
 function ElectricityConsumption(name, nominalConsumption) {
     this.name = name,
-    this.pluggedInStatus = 'Plugged In',
-    this.nominalConsumption = nominalConsumption;
+        this.pluggedInStatus = 'Plugged In',
+        this.nominalConsumption = nominalConsumption;
 }
 
-ElectricityConsumption.prototype.getPowerOnConsumptionActive = function(workTime){
+ElectricityConsumption.prototype.getPowerOnConsumptionActive = function (workTime) {
     console.log(`Electricity Consumption is ${this.nominalConsumption * workTime} wats`)
 }
 
-ElectricityConsumption.prototype.getPowerOnConsumptionWaitTime = function(waitTime){
+ElectricityConsumption.prototype.getPowerOnConsumptionWaitTime = function (waitTime) {
     console.log(`Electricity Consumption while wait is ${this.nominalConsumption * waitTime * 0.01} wats`);
 }
 
-function LedLamp(name, nominalConsumption, ledIncluded){
+function LedLamp(name, nominalConsumption, ledIncluded) {
     this.name = name,
-    this.nominalConsumption = nominalConsumption,
-    this.ledStatus = ledIncluded
+        this.nominalConsumption = nominalConsumption,
+        this.ledStatus = ledIncluded
 };
 
 LedLamp.prototype = new ElectricityConsumption();
